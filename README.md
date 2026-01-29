@@ -44,6 +44,27 @@ python3 -m http.server 8000
 
 The game is deployed via GitHub Pages from the `main` branch. Any push to `main` automatically updates the live site.
 
+### Contributing
+
+Direct pushes to `main` are blocked. All changes must go through a pull request:
+
+```bash
+# Create a feature branch
+git checkout -b my-feature
+
+# Make changes, then commit
+git add . && git commit -m "My changes"
+
+# Push the branch
+git push -u origin my-feature
+
+# Create a PR
+gh pr create --fill
+
+# Merge when ready
+gh pr merge --squash
+```
+
 ## Analytics
 
 PostHog is configured for basic web analytics.
